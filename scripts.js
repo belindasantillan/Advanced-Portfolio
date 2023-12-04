@@ -33,7 +33,7 @@ function contact(event) {
 
     emailjs
         .sendForm(
-            'ervice_un2gujc',
+            'service_un2gujc',
             'template_06945xr',
             event.target,
             'AWfJpaeLyK7K6YIZC'
