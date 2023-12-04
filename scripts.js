@@ -30,17 +30,9 @@ function contact(event) {
     const loading = document.querySelector('.modal__overlay--loading');
     const success = document.querySelector('.modal__overlay--success');
     loading.classList += " modal__overlay--visible";
-
-    emailjs
-        .sendForm(
-            'service_un2gujc',
-            'template_06945xr',
-            event.target,
-            'AWfJpaeLyK7K6YIZC'
-        ).then(() => {
+    emailjs.sendForm('service_un2gujc','template_06945xr', event.target, 'AWfJpaeLyK7K6YIZC').then(() => {
             loading.classList.remove("modal__overlay--visible");
-            success.classList += " modal__overlay--visible";
-        }).catch(() => {
+            success.classList += " modal__overlay--visible";}).catch(() => {
             loading.classList.remove("modal__overlay--visible");
             alert(
                 "The email server is temporarily unavailable. Please to contact directly at belindasarahisantillan@gmail.com"
